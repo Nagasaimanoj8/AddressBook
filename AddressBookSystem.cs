@@ -10,8 +10,10 @@ namespace AddressBook2
     {
         //declaring a List
         public List<Contacts> People = new List<Contacts>();
-               
+
+        /// <summary>
         /// UC1 ==> added contact details
+        /// </summary>
         public void ContactDetails()
         {
             //Created object of Contacts class
@@ -49,9 +51,10 @@ namespace AddressBook2
         }
 
 
-        
+        /// <summary>
         /// printing the details
-        
+        /// </summary>
+        /// <param name="person"></param>
         public void PrintDetails(Contacts person)
         {
             Console.WriteLine("First Name: " + person.firstname);
@@ -64,8 +67,11 @@ namespace AddressBook2
             Console.WriteLine("Email ID: " + person.email);
             Console.WriteLine("-------------------------------------------");
         }
-        
-        /// UC2 ==> Check any details present in list or not
+
+
+        /// <summary>
+        /// UC2 ==> Check any details present in list or not 
+        /// </summary>
         public void ListAllContacts()
         {
             if (People.Count == 0)
@@ -82,8 +88,11 @@ namespace AddressBook2
             Console.WriteLine("\nPress any key to continue.");
             Console.ReadKey();
         }
-               
+
+
+        /// <summary>
         /// UC3 ==> update the contact details which exist in the list
+        /// </summary>
         public void UpdateExistingContact()
         {
             Console.WriteLine("Press 1 If you want to edit any Contact in the Address Book");
@@ -171,14 +180,51 @@ namespace AddressBook2
                     break;
             }
         }
+
+        /// <summary>
+        /// UC4 ==> remove a person by searching his name
+        /// </summary>
+        public void RemovePerson()
+        {
+            Console.WriteLine("Enter the first name of the person you would like to remove:");
+            string firstname = Console.ReadLine();
+            //Contacts findperson = people.Find(x => x.firstname.ToLower() == firstname.ToLower());
+            Contacts findperson = People.FirstOrDefault(x => x.firstname.ToLower() == firstname.ToLower());
+            if (findperson == null)
+            {
+                Console.WriteLine("That person could not be found");
+            }
+            else
+            {
+                Console.WriteLine("Person with the Given name exists");
+                Console.WriteLine("Are you sure you want to remove this person from your address book? (Y/N)");
+                PrintDetails(findperson);
+                if (Console.ReadKey().Key == ConsoleKey.Y)
+                {
+
+                    People.Remove(findperson);
+                    Console.WriteLine("Person removed. Press any key to continue.");
+                    Console.ReadKey();
+                    return;
+                }
+                ListAllContacts();
+                if (Console.ReadKey().Key == ConsoleKey.N)
+                {
+                    Console.WriteLine("OKK. Press any key to continue.");
+                }
+            }
+        }
+
+        /// <summary>
         /// Choose options for adding the details in a address book
-       public void ChooseOption()
+        /// </summary>
+        public void ChooseOption()
         {
             Console.WriteLine("\n****************\nPlease Choose Any Option And Add The Details\n****************\n");
             bool exit = false;
             while (exit != true)
             {
-                Console.WriteLine("Choose a number: " + "\n1 :Create Contact\n" + "2 :List All People Present in the List\n" + "3 :Edit Existing Contact\n" + "4 :Exit From the Address Book\n");
+                Console.WriteLine("Choose a number: " + "\n1 :Create Contact\n" + "2 :List All People Present in the List\n" + "3 :Edit Existing Contact\n" + "4 :Removing Contact\n" + "5 :Exit From the Address Book\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -193,6 +239,9 @@ namespace AddressBook2
                         UpdateExistingContact();
                         break;
                     case 4:
+                        RemovePerson();
+                        break;
+                    case 5:
                         exit = true;
                         break;
                     default:
