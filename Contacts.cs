@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AddressBook2
 {
-    internal class Contacts
+    //model class
+    public class Contacts
     {
         //properties
         //by using encapsulation
@@ -18,6 +19,5 @@ namespace AddressBook2
         public int zipcode { get; set; }
         public double phonenumber { get; set; }
         public string email { get; set; }
-
     }
 }
