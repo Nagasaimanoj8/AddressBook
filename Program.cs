@@ -13,7 +13,7 @@ namespace AddressBook2
             //creating object
             AddressBookSystem addressBook = new AddressBookSystem();
 
-            Console.WriteLine("\n************\nWELCOME TO ADDRESS BOOK PROGRAM\n************\n\n");
+            Console.WriteLine("\n************\nWELCOME TO ADDRESS BOOK PROGRAM\n************\n");
             addressBook.ChooseOption();
         }
     }
