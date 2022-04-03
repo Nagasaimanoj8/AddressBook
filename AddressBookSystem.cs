@@ -8,12 +8,9 @@ namespace AddressBook2
 {
     public class AddressBookSystem
     {
-        //declaring a List
+       //declaring a List
         public List<Contacts> People = new List<Contacts>();
-
-        /// <summary>
         /// UC1 ==> added contact details
-        /// </summary>
         public void ContactDetails()
         {
             //Created object of Contacts class
@@ -49,8 +46,7 @@ namespace AddressBook2
             People.Add(person);
             Console.WriteLine("Successfully Added the Person Details");
         }
-            
-       /// printing the details
+        /// printing the details
         public void PrintDetails(Contacts person)
         {
             Console.WriteLine("First Name: " + person.firstname);
@@ -63,7 +59,9 @@ namespace AddressBook2
             Console.WriteLine("Email ID: " + person.email);
             Console.WriteLine("-------------------------------------------");
         }
-       /// UC2 ==> Check any details present in list or not 
+
+
+         /// UC2 ==> Check any details present in list or not 
         public void ListAllContacts()
         {
             if (People.Count == 0)
@@ -168,8 +166,8 @@ namespace AddressBook2
                     break;
             }
         }
-          /// UC4 ==> remove a person by searching his name
-           public void RemovePerson()
+        /// UC4 ==> remove a person by searching his name
+        public void RemovePerson()
         {
             Console.WriteLine("Enter the first name of the person you would like to remove:");
             string firstname = Console.ReadLine();
@@ -199,11 +197,7 @@ namespace AddressBook2
                 }
             }
         }
-<<<<<<< HEAD
-
-        /// <summary>
         /// UC5 ==> adding multiple contacts to the list
-        /// </summary>
         public void AddMultipleContact()
         {
             Console.Write("How many contacts want to add :");
@@ -215,10 +209,6 @@ namespace AddressBook2
                 i--;
             }
         }
-
-        /// <summary>
-=======
->>>>>>> 3f4c41b64dbb6c78c0c051beb5c269c0301a55a0
         /// Choose options for adding the details in a address book
         public void ChooseOption()
         {
@@ -226,7 +216,7 @@ namespace AddressBook2
             bool exit = false;
             while (exit != true)
             {
-                Console.WriteLine("Choose a number: " + "\n1 :Create Contact\n" + "2 :List All People Present in the List\n" + "3 :Edit Existing Contact\n" + "4 :Removing Contact\n" + "5 :Adding Multiple Contact\n" + "6 :Exit From the Address Book\n");
+                Console.WriteLine("Choose a number: " + "\n1 :Create Contact\n" + "2 :List All People Present in the List\n"+ "3 :Edit Existing Contact\n" + "4 :Removing Contact\n" + "5 :Adding Multiple Contact\n" + "6 :Exit From the Address Book\n");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
