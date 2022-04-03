@@ -17,7 +17,12 @@ namespace AddressBook2
             Console.WriteLine("\n***********************************\nWELCOME TO ADDRESS BOOK PROGRAM\n***********************************\n\n");
 
             Console.WriteLine("\n************\nWELCOME TO ADDRESS BOOK PROGRAM\n************\n");
+<<<<<<< HEAD
                      addressBook.ChooseOption();
+=======
+
+            addressBook.ChooseOption();
+>>>>>>> 3f4c41b64dbb6c78c0c051beb5c269c0301a55a0
         }
     }
 }

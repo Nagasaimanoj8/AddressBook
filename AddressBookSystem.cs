@@ -49,12 +49,8 @@ namespace AddressBook2
             People.Add(person);
             Console.WriteLine("Successfully Added the Person Details");
         }
-
-
-        /// <summary>
-        /// printing the details
-        /// </summary>
-        /// <param name="person"></param>
+            
+       /// printing the details
         public void PrintDetails(Contacts person)
         {
             Console.WriteLine("First Name: " + person.firstname);
@@ -67,11 +63,7 @@ namespace AddressBook2
             Console.WriteLine("Email ID: " + person.email);
             Console.WriteLine("-------------------------------------------");
         }
-
-
-        /// <summary>
-        /// UC2 ==> Check any details present in list or not 
-        /// </summary>
+       /// UC2 ==> Check any details present in list or not 
         public void ListAllContacts()
         {
             if (People.Count == 0)
@@ -88,11 +80,7 @@ namespace AddressBook2
             Console.WriteLine("\nPress any key to continue.");
             Console.ReadKey();
         }
-
-
-        /// <summary>
         /// UC3 ==> update the contact details which exist in the list
-        /// </summary>
         public void UpdateExistingContact()
         {
             Console.WriteLine("Press 1 If you want to edit any Contact in the Address Book");
@@ -180,11 +168,8 @@ namespace AddressBook2
                     break;
             }
         }
-
-        /// <summary>
-        /// UC4 ==> remove a person by searching his name
-        /// </summary>
-        public void RemovePerson()
+          /// UC4 ==> remove a person by searching his name
+           public void RemovePerson()
         {
             Console.WriteLine("Enter the first name of the person you would like to remove:");
             string firstname = Console.ReadLine();
@@ -214,6 +199,7 @@ namespace AddressBook2
                 }
             }
         }
+<<<<<<< HEAD
 
         /// <summary>
         /// UC5 ==> adding multiple contacts to the list
@@ -231,8 +217,9 @@ namespace AddressBook2
         }
 
         /// <summary>
+=======
+>>>>>>> 3f4c41b64dbb6c78c0c051beb5c269c0301a55a0
         /// Choose options for adding the details in a address book
-        /// </summary>
         public void ChooseOption()
         {
             Console.WriteLine("\n****************\nPlease Choose Any Option And Add The Details\n****************\n");
