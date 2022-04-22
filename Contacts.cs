@@ -7,17 +7,34 @@ using System.Threading.Tasks;
 namespace AddressBook2
 {
     //model class
-    public class Contacts
+    class Person
     {
-        //properties
-        //by using encapsulation
-        public string firstname { get; set; }
-        public string lastname { get; set; }
-        public string address { get; set; }
-        public string city { get; set; }
-        public string state { get; set; }
-        public int zipcode { get; set; }
-        public double phonenumber { get; set;}
-        public string email { get; set; }
+        private String lname, address, city, state, phone, zip, email; //Declaring (Creating) Variables
+        public Person(String fname, String lname, String address, String city, String state, String phone, String zip, string email)
+        {                                                   //constructor
+            this.FirstName = fname;
+            this.LastName = lname;
+            this.Address = address;
+            this.City = city;
+            this.State = state;
+            this.PhoneNo = phone;
+            this.ZipCode = zip;
+            this.email = email;
+        }
+
+        public string FirstName { get; set; }         // get method returns the value of the variable FirstName.
+                                                      // set method assigns a value to the name variable.
+        public string LastName { get => lname; set => lname = value; }
+        public string Address { get => address; set => address = value; }
+        public string City { get => city; set => city = value; }
+        public string State { get => state; set => state = value; }
+        public string PhoneNo { get => phone; set => phone = value; }
+        public string ZipCode { get => zip; set => zip = value; }
+        public string Email { get => email; set => email = value; }
+        public override string ToString() //Tostring  method store value
+        {
+            return "FirstName:- " + FirstName + "\nLastName:- " + LastName + " \nAddress:- " + Address + " \nCity:- " + City
+                 + "\nState:- " + State + "\nZipCode:- " + ZipCode + "\nPhoneNo:- " + PhoneNo + "\nEmail:- " + email + " " + "\n";
+        }
     }
 }
