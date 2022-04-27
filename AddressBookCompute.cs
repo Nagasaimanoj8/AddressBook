@@ -14,7 +14,7 @@ namespace AddressBook2
         private List<ContactDetails> cityList;
         bool AVAILABLE = false;
         //this method add details to the address book
-        public void AddContactDetails(string firstName, string lastName, string address, string city, string state, string zipCode, string phoneNumber, Dictionary<string, List<ContactDetails>> stateDic, Dictionary<string, List<ContactDetails>> cityDic, List<ContactDetails> contactList)
+        public void AddContactDetails(Dictionary<string, List<ContactDetails>> stateDic, Dictionary<string, List<ContactDetails>> cityDic, List<ContactDetails> contactList, ContactDetails contactDetails, string firstName, string state, string city)
         {
             //find the data that already has the same value 
             ContactDetails details = contactList.Find(x => x.firstName.Equals(firstName));
@@ -22,7 +22,7 @@ namespace AddressBook2
             //if no sush record is available then add the data
             if (details == null)
             {
-                ContactDetails contactDetails = new ContactDetails(firstName, lastName, address, city, state, zipCode, phoneNumber);
+
                 contactList.Add(contactDetails);
                 if (!stateDic.ContainsKey(state))
                 {
@@ -64,6 +64,7 @@ namespace AddressBook2
                 contact.Display();
             }
         }
+
         //Delete the particular object
         public void DeleteContact(string name, List<ContactDetails> contactList)
         {
@@ -76,7 +77,6 @@ namespace AddressBook2
                 Console.WriteLine("{0}'s record is not avaliable");
             }
         }
-
         public void EditContact(string name, string number, List<ContactDetails> contactList)
         {
             AVAILABLE = false;
@@ -97,7 +97,6 @@ namespace AddressBook2
             }
 
         }
-
         //method to find the record of persons in particular state or city
         public static void FindPerson(Dictionary<string, List<ContactDetails>> addressDictionary)
         {
@@ -119,10 +118,6 @@ namespace AddressBook2
             }
 
         }
-
-
-
-
         //method to find the number of item in th particular address book
         public static void CountOfPersons(Dictionary<string, List<ContactDetails>> Dic)
         {
