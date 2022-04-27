@@ -13,7 +13,6 @@ namespace AddressBookProgram
 {
     class FileOperation
     {
-
         string filepath = @"C:\Users\hp\source\repos\AddressBookProgram\AddressBookProgram\AddressBook.txt";
         string csvFile = @"C:\Users\hp\source\repos\AddressBookProgram\AddressBookProgram\ContactDetails.csv";
         string jsonFile = @"C:\Users\hp\source\repos\AddressBookProgram\AddressBookProgram\addressbook.json";
