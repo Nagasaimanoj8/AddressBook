@@ -45,7 +45,6 @@ namespace AddressBook2
         }
 
     }
-
 }
 
 
