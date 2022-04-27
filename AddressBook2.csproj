@@ -72,14 +72,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddressBookCompute.cs" />
-    <Compile Include="AddressBookSystemMain.cs" />
     <Compile Include="ContactDetails.cs" />
+    <Compile Include="CSVFileOperations.cs" />
+    <Compile Include="DataBaseOperations.cs" />
     <Compile Include="FileOperation.cs" />
+    <Compile Include="JsonFileOperation.cs" />
     <Compile Include="OperationManagement.cs" />
     <Compile Include="program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include="AddressBook.Json" />
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
