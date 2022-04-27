@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AddressBook2
-{/// <summary>
- /// This class store the address details 
- /// </summary>
+{ /// <summary>
+  /// This class store the address details 
+  /// </summary>
     public class ContactDetails
     {
+        public int personId { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string address { get; set; }
@@ -17,18 +18,7 @@ namespace AddressBook2
         public string state { get; set; }
         public string zipCode { get; set; }
         public string phoneNumber { get; set; }
-
-        //constructor that gets user detail and store it in the current object
-        public ContactDetails(string firstName, string lastName, string address, string city, string state, string zipCode, string phoneNumber)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.address = address;
-            this.city = city;
-            this.state = state;
-            this.zipCode = zipCode;
-            this.phoneNumber = phoneNumber;
-        }
+        public string emailAddress { get; set; }
 
         //it displays the details of the address book
         public void Display()

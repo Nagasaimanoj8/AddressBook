@@ -268,5 +268,18 @@ namespace AddressBook2
             int res = new DataBaseOperations().EditContactDetail(id, firstName, phoneNumber);
             return res;
         }
+        public List<ContactDetails> RetrivingDataBasedOnDate(DateTime startDate, DateTime endDate)
+        {
+            DataBaseOperations operation = new DataBaseOperations();
+            List<ContactDetails> detail = operation.RetriveBasedOnDate(startDate, endDate);
+            return detail;
+        }
+
+        public List<ContactDetails> RetrivingDataBasedOnStateCity(string state, string city)
+        {
+            DataBaseOperations operation = new DataBaseOperations();
+            List<ContactDetails> detail = operation.RetriveBasedOnStateOrCity(state, city);
+            return detail;
+        }
     }
 }
