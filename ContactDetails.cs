@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBook2
 {
-    internal class ContactDetails
+    class ContactDetails
     {
         public string firstName;
         public string lastName;
@@ -39,7 +39,12 @@ namespace AddressBook2
             Console.WriteLine("phone number:{0}", this.phoneNumber);
 
         }
+        public void SetDetail(long number)
+        {
+            this.phoneNumber = number;
+        }
 
     }
 }
+
 
