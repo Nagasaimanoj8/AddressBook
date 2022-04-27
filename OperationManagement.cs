@@ -6,38 +6,16 @@ using System.Threading.Tasks;
 
 namespace AddressBook2
 {
-    
-        class OperationManagement
+    internal class OperationManagement
+    {
+        public static void ReadInput()
         {
-            public static void ReadInput()
-            {
-                Console.WriteLine("Enter the contact details");
-                AddDetails();
 
-            }
-
-            //gets the user details from the user
-            public static void AddDetails()
-            {
-                Console.WriteLine("Enter first Name");
-                string firstName = Console.ReadLine();
-                Console.WriteLine("Enter Last Name");
-                string lastName = Console.ReadLine();
-                Console.WriteLine("Enter Address");
-                string address = Console.ReadLine();
-                Console.WriteLine("Enter City");
-                string city = Console.ReadLine();
-                Console.WriteLine("Enter State");
-                string state = Console.ReadLine();
-                Console.WriteLine("Enter Zipcode");
-                long zipCode = Convert.ToInt64(Console.ReadLine());
-                Console.WriteLine("Enter Phone Number");
-                long phoneNumber = Convert.ToInt64(Console.ReadLine());
-
-                //create object for the class address compute and call the set contact detail method 
-                AddressBookCompute addressBookCompute = new AddressBookCompute();
-                addressBookCompute.AddContactDetails(firstName, lastName, address, city, state, zipCode, phoneNumber);
-            }
+            AddressBookCompute addressBookCompute = new AddressBookCompute();
+            ////create object for the class address compute and call the set contact detail method
+            addressBookCompute.AddContactDetails("sou", "muthu", "Anna nagar", "madurai", "Tamil Nadu", 625107, 9964747576);
+            addressBookCompute.AddContactDetails("gemini", "muthu", "K.K.Nagar", "chennai", "Tamil Nadu", 600008, 9487812639);
+            addressBookCompute.DisplayContact();
         }
     }
-
+}
